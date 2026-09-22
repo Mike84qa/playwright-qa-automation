@@ -1,8 +1,10 @@
-# Playwright QA Automation Project
+# Playwright QA Automation Portfolio
 
-A hands-on QA automation project built with **Playwright** and **TypeScript**.
+A QA automation portfolio project built with **Playwright** and **TypeScript**, demonstrating maintainable end-to-end testing of an e-commerce web application.
 
-The project demonstrates automated testing of an e-commerce application using the **Page Object Model (POM)** design pattern.
+The framework applies the **Page Object Model (POM)** design pattern to separate test scenarios from page-specific implementation and provides automated coverage across authentication, product validation, shopping cart operations, and the complete checkout flow.
+
+The project also includes **GitHub Actions CI** for automated test execution.
 
 ## Technologies
 
@@ -122,6 +124,8 @@ The repository includes a **GitHub Actions** workflow for automated test executi
 
 ## Project Status
 
-This project is actively being developed as part of hands-on QA automation training.
+This project is actively maintained as part of my public QA Automation portfolio.
 
-Additional test scenarios and framework improvements will be added as the project evolves.
+Current coverage focuses on end-to-end e-commerce scenarios using Playwright and TypeScript.
+
+Planned improvements include expanded negative testing, reusable test fixtures, API testing, and additional CI/CD capabilities.
