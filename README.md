@@ -6,6 +6,24 @@ The framework applies the **Page Object Model (POM)** design pattern to separate
 
 The project also includes **GitHub Actions CI** for automated test execution.
 
+## Current Status
+
+- ✅ 6 automated end-to-end test scenarios
+- ✅ 18 cross-browser test executions
+- ✅ Chromium, Firefox, and WebKit coverage
+- ✅ Page Object Model (POM) architecture
+- ✅ Complete e-commerce checkout flow automation
+- ✅ Positive and negative authentication testing
+- ✅ Product and shopping cart validation
+- ✅ GitHub Actions CI integration
+
+### Latest Local Test Run
+
+```text
+18 passed
+Chromium · Firefox · WebKit
+```
+
 ## Technologies
 
 - TypeScript
@@ -29,7 +47,7 @@ tests/
 
 ## Automated Test Coverage
 
-Current automated scenarios include:
+The 6 automated scenarios collectively cover:
 
 - Successful login with valid credentials
 - Login validation with invalid credentials
