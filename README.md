@@ -8,26 +8,34 @@ The project also includes **GitHub Actions CI** for automated test execution.
 
 ## Current Status
 
-- ✅ 6 automated end-to-end test scenarios
-- ✅ 18 cross-browser test executions
+- ✅ 6 automated UI end-to-end test scenarios
+- ✅ 18 cross-browser UI test executions
+- ✅ 5 REST API tests
+- ✅ 23 total automated test executions
 - ✅ Chromium, Firefox, and WebKit coverage
+- ✅ Dedicated Playwright API test project
 - ✅ Page Object Model (POM) architecture
 - ✅ Complete e-commerce checkout flow automation
-- ✅ Positive and negative authentication testing
-- ✅ Product and shopping cart validation
+- ✅ Positive and negative testing
 - ✅ GitHub Actions CI integration
 
-### Latest Local Test Run
+### Latest Test Run
 
 ```text
-18 passed
-Chromium · Firefox · WebKit
+23 passed
+
+UI: 18 cross-browser executions
+API: 5 REST API tests
+
+Chromium · Firefox · WebKit · API
 ```
 
 ## Technologies
 
 - TypeScript
 - Playwright
+- Playwright APIRequestContext
+- REST API Testing
 - Node.js
 - Git & GitHub
 - GitHub Actions
@@ -36,6 +44,8 @@ Chromium · Firefox · WebKit
 
 ```text
 tests/
+├── api/
+│   └── products-api.spec.ts
 ├── data/
 ├── pages/
 │   ├── LoginPage.ts
@@ -43,6 +53,8 @@ tests/
 │   ├── CartPage.ts
 │   └── CheckoutPage.ts
 └── login.spec.ts
+
+playwright.config.ts
 ```
 
 ## Automated Test Coverage
@@ -59,6 +71,20 @@ The 6 automated scenarios collectively cover:
 - Customer information entry
 - Product and price validation during checkout
 - Successful order completion validation
+
+## API Test Coverage
+
+The project includes a dedicated Playwright API test suite using the DummyJSON REST API.
+
+Current API coverage includes:
+
+- GET product list — status and response body validation
+- GET non-existing product — 404 negative scenario
+- POST new product — response data and generated ID validation
+- PUT existing product — update validation
+- DELETE product — deletion response validation
+
+API tests run through a dedicated Playwright project and are executed once per test run, independently of the browser-based UI projects.
 
 ## End-to-End Checkout Flow
 
@@ -124,17 +150,9 @@ npx playwright show-report
 
 ## Automation Design
 
-The project demonstrates:
-
-- Page Object Model (POM)
-- Reusable page methods
-- Playwright locators
-- Assertions and validations
-- Dynamic product selection using locators and filters
-- TypeScript types and asynchronous operations
-- End-to-end user flow automation
-- HTML test reporting
-- Source control with Git
+- REST API testing with Playwright
+- Positive and negative API validation
+- Dedicated UI and API Playwright projects
 
 ## Continuous Integration
 
@@ -144,6 +162,8 @@ The repository includes a **GitHub Actions** workflow for automated test executi
 
 This project is actively maintained as part of my public QA Automation portfolio.
 
-Current coverage focuses on end-to-end e-commerce scenarios using Playwright and TypeScript.
+Current coverage includes cross-browser end-to-end UI automation and REST API testing using Playwright and TypeScript.
 
-Planned improvements include expanded negative testing, reusable test fixtures, API testing, and additional CI/CD capabilities.
+The test architecture separates browser-based UI projects from API testing, with automated execution through GitHub Actions CI.
+
+Planned improvements include expanded negative testing, reusable test fixtures, and additional CI/CD capabilities.
